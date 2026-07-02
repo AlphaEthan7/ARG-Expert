@@ -102,19 +102,6 @@ chmod +x scripts/train_optimized.sh
 ./scripts/train_optimized.sh
 ```
 
-Training consists of a single **Warmup** stage (5 epochs, ESM2 frozen) that initializes downstream components. Checkpoints are saved to `output/`.
-
-Key hyperparameters (see `model/config.py` for full details):
-
-| Parameter | Value |
-|-----------|-------|
-| Warmup epochs | 5 |
-| Warmup batch size | 96 |
-| Warmup learning rate | 1e-4 |
-| Max sequence length | 1000 |
-| Binary threshold | 0.002 |
-| Multiclass confidence threshold | 0.3 |
-
 ### 3. Evaluate
 
 ```bash
